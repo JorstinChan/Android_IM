@@ -17,6 +17,29 @@ ECChatManager manager = ECDevice.getECChatManager();
 manager.sendMessage(msg, 
 new ECChatManager.OnSendMessageListener());
 ```
+# Release Note
+
+### Current Version: 5.0.3
+Fixed Bugs:
+1）修复5.0.2 bugs
+2）点对点消息显示成群组消息；
+3）离线消息过多时界面卡顿的情况；
+4）发送图片显示位置错乱；
+5）断网发送图片失败，聊天UI上不显示图片；
+6）Demo登出后还能收到推送消息；
+7）解决小米4收不到消息的问题；
+ 
+New Feature:
+ 
+1）免打扰功能；
+2）支持GIF图片发送和显示；
+3）离线消息全部获取完成后提示一声；
+4）群组消息会话界面显示最后一条的发送者昵称；
+5）附件下载3次重试；
+6）Demo重启检查失败消息；
+7）系统通讯录变化监听同步；
+8）手动点击“网络连接失败”条后重连
+
 
 License
 ===
