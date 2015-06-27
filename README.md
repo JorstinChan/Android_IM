@@ -14,8 +14,7 @@ ECTextMessageBody msgBody = new ECTextMessageBody("欢迎来到云通讯");
 msg.setBody(msgBody);
 // 调用SDK发送接口发送消息到服务器
 ECChatManager manager = ECDevice.getECChatManager();
-manager.sendMessage(msg, 
-new ECChatManager.OnSendMessageListener());
+manager.sendMessage(msg, new ECChatManager.OnSendMessageListener());
 ```
 # Release Note
 
