@@ -16,7 +16,7 @@ msg.setBody(msgBody);
 ECChatManager manager = ECDevice.getECChatManager();
 manager.sendMessage(msg, 
 new ECChatManager.OnSendMessageListener());
-
+```
 
 License
 ===
