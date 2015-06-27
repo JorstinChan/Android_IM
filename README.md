@@ -1,6 +1,7 @@
 # Android_IM
 In Android to send and receive instant messages
 
+```java
 // 发送消息
 ECMessage msg = ECMessage.createECMessage(ECMessage.Type.TXT);
 // 设置消息的属性：发出者，接受者，发送时间等
