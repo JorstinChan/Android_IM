@@ -16,6 +16,11 @@ msg.setBody(msgBody);
 ECChatManager manager = ECDevice.getECChatManager();
 manager.sendMessage(msg, new ECChatManager.OnSendMessageListener());
 ```
+# ReadMe
+为了方便第三方开发者快速集成云通讯IM SDK，我们提供了以下联系方式，协助开发者进行集成：  
+**QQ群：416105798（新）**  
+**QQ群：427337647（已满）**  
+
 ## SDK初始化与注册
 5.0版本新增appToken验证方式，开发者只需要根据appKey 和appToken 加上注册账号既可以进行注册SDK
 ### 1. appToken验证
