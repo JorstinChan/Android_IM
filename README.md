@@ -16,6 +16,36 @@ msg.setBody(msgBody);
 ECChatManager manager = ECDevice.getECChatManager();
 manager.sendMessage(msg, new ECChatManager.OnSendMessageListener());
 ```
+## SDK初始化与注册
+5.0版本新增appToken验证方式，开发者只需要根据appKey 和appToken 加上注册账号既可以进行注册SDK
+### 1. appToken验证
+```java
+ECInitParams mInitParams = new ECInitParams();
+mInitParams.setUserid("userid");
+mInitParams.setAppKey("appKey");
+mInitParams.setToken("appToken");
+mInitParams.setMode(ECInitParams.LoginMode.FORCE_LOGIN);
+// 使用默认验证方式
+mInitParams.setAuthType(ECInitParams.LoginAuthType.NORMAL_AUTH);
+```
+### 2. 账户密码验证（VoIP）
+```java
+// VoIP方式登陆
+ECInitParams mInitParams = new ECInitParams();
+mInitParams.setUserid("VoIP");
+// appkey
+mInitParams.setAppKey("appkey");
+// appToken
+mInitParams.setToken("apptoken");
+// ECInitParams.LoginMode.FORCE_LOGIN
+mInitParams.setMode(ECInitParams.LoginMode.FORCE_LOGIN);
+// 如果有密码（VoIP密码，对应的登陆验证模式是）
+// ECInitParams.LoginAuthType.PASSWORD_AUTH
+mInitParams.setPwd("VoIPToken");
+// 使用密码验证方式
+mInitParams.setAuthType(ECInitParams.LoginAuthType.PASSWORD_AUTH);
+```
+
 # Release Note
 
 ### Current Version: 5.0.3
