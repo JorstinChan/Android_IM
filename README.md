@@ -21,9 +21,9 @@ manager.sendMessage(msg, new ECChatManager.OnSendMessageListener());
 ### 1. appToken验证
 ```java
 ECInitParams mInitParams = new ECInitParams();
-mInitParams.setUserid("userid");
-mInitParams.setAppKey("appKey");
-mInitParams.setToken("appToken");
+mInitParams.setUserid("$userid");
+mInitParams.setAppKey("$appKey");
+mInitParams.setToken("$appToken");
 mInitParams.setMode(ECInitParams.LoginMode.FORCE_LOGIN);
 // 使用默认验证方式
 mInitParams.setAuthType(ECInitParams.LoginAuthType.NORMAL_AUTH);
@@ -32,16 +32,16 @@ mInitParams.setAuthType(ECInitParams.LoginAuthType.NORMAL_AUTH);
 ```java
 // VoIP方式登陆
 ECInitParams mInitParams = new ECInitParams();
-mInitParams.setUserid("VoIP");
+mInitParams.setUserid("$VoIP");
 // appkey
-mInitParams.setAppKey("appkey");
+mInitParams.setAppKey("$appkey");
 // appToken
-mInitParams.setToken("apptoken");
+mInitParams.setToken("$apptoken");
 // ECInitParams.LoginMode.FORCE_LOGIN
 mInitParams.setMode(ECInitParams.LoginMode.FORCE_LOGIN);
 // 如果有密码（VoIP密码，对应的登陆验证模式是）
 // ECInitParams.LoginAuthType.PASSWORD_AUTH
-mInitParams.setPwd("VoIPToken");
+mInitParams.setPwd("$VoIPToken");
 // 使用密码验证方式
 mInitParams.setAuthType(ECInitParams.LoginAuthType.PASSWORD_AUTH);
 ```
